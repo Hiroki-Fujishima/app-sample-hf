@@ -21,15 +21,38 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const messages = {
+  profileTitle : 'プロフィール',
+  title1 : '名前：藤島裕貴',
+  pad1 :'1990年7月16日生',
+
+  career : '経歴',
+  title2 : '北海道出身の高卒',
+  pad2 : '某エネルギー会社\n某コールセンター\n某IT会社\n現在に至る',
+  
+  appeal : '自己PR',
+  title3 : '現在できること、学んでいること',
+  pad3 : 'Javascript',
+ 
+  contact : '連絡先',
+  title4 : '連絡はこちらへ',
+  pad4 : '○○@gmail.com',
+  
+};
+
 export default function MyPanel() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
+
+    
   };
 
+  
   return (
+    
+    
     <div className={classes.root}>
       <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ExpansionPanelSummary
@@ -37,63 +60,66 @@ export default function MyPanel() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography className={classes.heading}>プロフィール ~Profile~</Typography>
-          <Typography className={classes.secondaryHeading}>名前：藤島裕貴</Typography>
+          <Typography className={classes.heading}>{messages.profileTitle}</Typography>
+          <Typography className={classes.secondaryHeading}> {messages.title1}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-          1990年7月16日生
+          {messages.pad1}
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
+
       <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography className={classes.heading}>Users</Typography>
+          <Typography className={classes.heading}>{messages.career}</Typography>
           <Typography className={classes.secondaryHeading}>
-            You are currently not an owner
+            {messages.title2}
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
-            diam eros in elit. Pellentesque convallis laoreet laoreet.
+            {messages.pad2}
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
+
       <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
-          <Typography className={classes.heading}>Advanced settings</Typography>
+          <Typography className={classes.heading}>{messages.appeal}</Typography>
           <Typography className={classes.secondaryHeading}>
-            Filtering has been entirely disabled for whole web server
+            {messages.title3}
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-            vitae egestas augue. Duis vel est augue.
+           {messages.pad3}
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
+
       <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <Typography className={classes.heading}>Personal data</Typography>
+          <Typography className={classes.heading}>{messages.contact}</Typography>
+          <Typography className={classes.secondaryHeading}>
+          {messages.title4}
+          </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-            vitae egestas augue. Duis vel est augue.
+            {messages.pad4}
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>

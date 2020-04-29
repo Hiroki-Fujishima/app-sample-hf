@@ -4,13 +4,19 @@ import './App.css';
 import Header from './Header';
 import MyPaper from './MyPaper';
 import MyPanel from './MyPanel';
+import MyGrid from './MyGrid';
+import MyButton from './MyButton';
+import MyCard from './MyCard';
 
 function App() {
   return (
     <div>
       <Header/>
-      <MyPaper/>
+      <MyCard/>
       <MyPanel/>
+      <MyButton/>
+      <MyGrid/>
+      <MyPaper/>
 
     </div>
   );
