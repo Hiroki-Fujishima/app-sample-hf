@@ -27,7 +27,7 @@ export default function MyCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="../stub/img/js.png"
+          image="../stub/img/compass.jpg"
           title="Contemplative Reptile"
         />
         <CardContent>

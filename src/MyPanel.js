@@ -34,7 +34,7 @@ const messages = {
   title3 : '現在できること、学んでいること',
   pad3 : 'Javascript',
  
-  contact : '連絡先',
+  contact : 'リンク先',
   title4 : '連絡はこちらへ',
   pad4 : '○○@gmail.com',
   

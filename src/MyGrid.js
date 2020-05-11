@@ -50,9 +50,9 @@ const useStyles = makeStyles((theme) => ({
     author: 'author',
   },
   {
-    img: '../stub/img/program.JPG',
-    title: 'Image',
-    author: 'author',
+    img: '../stub/img/github.png',
+    title: 'Githubアカウント',
+    author: <a href="https://github.com/Hiroki-Fujishima">'Hiroki-Fujishima'</a>,
   },
 ];
 
@@ -70,9 +70,10 @@ export default function MyGrid() {
             <img src={tile.img} alt={tile.title} />
             <GridListTileBar
               title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
+              subtitle={<span>リンク先:{tile.author}</span>}
               actionIcon={
                 <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
+                 
                   <InfoIcon />
                 </IconButton>
               }

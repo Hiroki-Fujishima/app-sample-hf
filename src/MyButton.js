@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 
 const buttons = {
     button1 : 'Default',
-    button2 :  '../stub/img/js.png',
+    button2 :  '../stub/img/house.ico',
     button3 : 'Instagram',
     button4 : 'Disabled',
     button5 : 'Link',
@@ -22,7 +22,7 @@ export default function MyButton() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Button variant="contained">{buttons.button1}</Button>
+      <Button variant="contained">{buttons.button2}</Button>
       <Button variant="contained" color="primary">
       </Button><Button variant="contained" color="primary">
       <a href="https://twitter.com/0GQpaPFZzkfJLzR">
